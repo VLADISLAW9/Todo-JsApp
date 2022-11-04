@@ -1,0 +1,41 @@
+.navbar_menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px 20px;
+    background-color: #ffff;
+    width: 20%;
+    height: 100%;
+    border-radius: 0px 0px 32px 32px;
+    transition: transform .3s ease-in-out;
+    transform: translateX(-101%);
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+.closemenu_block{
+    text-align: center;
+}
+
+.closemenu{
+    padding: 10px 40%;
+    background-color: black;
+    color: #ffff;
+
+}
+
+.nav-item{
+    margin-top: 20px;
+}
+
+.navbar_menu.is-active {
+    transform: none;
+}
+
+.nav-list{
+    margin-top: 70px;
+    list-style: none;
+}
