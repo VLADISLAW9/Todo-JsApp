@@ -6,7 +6,6 @@
     top: 0;
     left: 0;
     bottom: 0;
-    padding: 10px 20px;
     background-color: #ffff;
     width: 20%;
     height: 100%;
@@ -16,26 +15,41 @@
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
 }
 
-.closemenu_block{
-    text-align: center;
+.closemenu_block {
+    text-align: end;
 }
 
-.closemenu{
-    padding: 10px 40%;
-    background-color: black;
-    color: #ffff;
-
+.closemenu {
+    font-size: 24px;
+    padding: 10px 4px;
+    border-radius: 16px;
+    text-decoration: none;
+    /* background-color: black; */
+    /* color: #ffff; */
+    color: black;
+    transition: all .3s ease-in-out;
 }
 
-.nav-item{
-    margin-top: 20px;
+
+/* .closemenu:hover {
+    background-color: #ffff;
+    color: black;
+} */
+
+
+.nav-item {
+    margin-top: 35px;
 }
 
 .navbar_menu.is-active {
     transform: none;
 }
 
-.nav-list{
+.nav-list {
     margin-top: 70px;
     list-style: none;
+}
+
+.nav-link {
+    font-size: 20px;
 }
