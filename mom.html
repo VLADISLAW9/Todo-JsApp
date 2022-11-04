@@ -20,67 +20,17 @@
       createToDoApp(document.getElementById('todo-app'), 'Дела мамы', 'Мама');
     })
   </script>
-  <script>
-    async function loadTodoItems() {
-      const response = await fetch('http://localhost:3000/api/todos');
-      const data = await response.json();
-      console.log(data);
-    }
-
-    async function createTodoItem() {
-      const response = await fetch('http://localhost:3000/api/todos', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name: 'Сходить за хлебом',
-          owner: 'Тимофей'
-        })
-      });
-      const data = await response.json();
-      console.log(data);
-    }
-
-    async function getTodoItem() {
-      const response = await fetch('http://localhost:3000/api/todos/1608029025426');
-      const data = await response.json();
-      console.log(data);
-    }
-
-    async function markTodoAsDone() {
-      const response = await fetch('http://localhost:3000/api/todos/1608029025426', {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          done: true
-        })
-      });
-      const data = await response.json();
-      console.log(data);
-    }
-
-    async function deleteTodoItem() {
-      const response = await fetch('http://localhost:3000/api/todos/1608029025426', {
-        method: 'DELETE',
-      });
-      if (response.status === 404)
-        console.log('Не удалось удалить дело, так как его не существует');
-      const data = await response.json();
-      console.log(data);
-    }
-  </script>
 </head>
 
 <body>
   <div class="container">
 
-    <div id="navmenu" class="navbar_menu">
+    <div id="navmenu" class="container navbar_menu">
 
       <div class="closemenu_block">
-        <a href="#" id="closenav" class="closemenu"><img width="30px" height="30px" src="/img/close.png" alt=""></a>
+        <a href="#" id="closenav" class="closemenu"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+        </svg></a>
       </div>
 
       <ul class="nav-list">
